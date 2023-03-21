@@ -7,11 +7,14 @@ import android.view.View
 import android.view.ViewGroup
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
+import javax.inject.Named
 
 @AndroidEntryPoint
 class MainFragment : Fragment() {
 
     @Inject
+//    @Named("sql")
+    @FirebaseQualifier
     lateinit var userRepository: UserRepository
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
